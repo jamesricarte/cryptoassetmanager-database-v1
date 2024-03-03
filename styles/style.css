@@ -1,0 +1,299 @@
+/*DETECT SCREEN SIZE*/
+@media only screen and (max-width: 855px) {
+.input-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.center-input .input-container {
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.table-container {
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.table-container thead td {
+    font-size: 8px;
+}
+
+.table-container tbody td {
+    font-size: 13px;
+}
+}
+
+@media only screen and (max-width: 770px) {
+    .logs-row table thead td {
+        font-size: 8px;
+    }
+
+    .logs-row table tbody td {
+        font-size: 13px;
+    }
+
+    .table-buttons button {
+        font-size: 11px;
+    }
+}
+
+.center-selected-coin-active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.center-selected-coin-active .selected-coin-container, 
+.center-selected-coin-active .standby-funds-container,
+.center-selected-coin-active .total-funds-container {
+    width: 310px;
+    margin-right: 0px;
+}
+
+/* DEFAULT STYLINGS*/
+
+* {
+    margin: 0;
+    font-family: 'Roboto';
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+h2 {
+    padding: 20px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(222, 222, 222);
+    margin-bottom: 25px;
+}
+
+.title {
+    padding: 20px;
+    font-size: 16px;
+    padding-bottom: 0px;
+}
+
+.value {
+    padding-left: 20px;
+    font-size: 14PX;
+}
+
+button, input[type=submit] {
+    background-color: #fffc51;
+    border-style: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:active, input[type=submit]:active {
+    opacity: .5;
+}
+
+input[type=text] {
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 0px;
+    border-color: rgb(152, 152, 152);
+    height: 25px;
+}
+
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+/* DEFAULT STYLINGS*/
+
+
+/* EDIT PAGE*/
+.center-selected-coin {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.selected-coin-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(246, 246, 246);
+    border-radius: 18px;
+    margin-right: 20px;
+    width: 390px;
+}
+
+.standby-funds-container {
+    background-color: rgb(246, 246, 246);
+    border-radius: 18px;
+    height: 120px;
+    width: 390px;
+    margin-bottom: 10px;
+}
+
+.total-funds-container {
+    background-color: rgb(246, 246, 246);
+    border-radius: 18px;
+    height: 120px;
+    width: 390px;
+
+}
+
+.coin-name {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.coin-info-2-sub-2 {
+    margin-bottom: 20px;
+}
+
+.center-logs {
+    display: flex;
+    justify-content: center;
+}
+
+.logs-row {
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.table-buttons button {
+    margin-right: 6px;
+}
+
+.logs-row table thead tr td {
+    padding-right: 10px;
+    font-size: 14px;
+}
+.logs-row table {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    
+}
+
+.main-investment, .current-value {
+    background-color: rgb(177, 255, 177);
+    border-radius: 8px;
+    padding: 5px;
+    margin-right: 20px;
+}
+
+.deducted-value {
+    background-color: rgb(255, 177, 177);
+    border-radius: 8px;
+    padding: 5px;
+    margin-right: 20px;
+}
+
+.logs-delete-button {
+    background-color: #ff0b0b;
+    color: white;
+}
+/* EDIT PAGE*/
+
+
+/* INDEX PAGE */
+.center-input {
+    display: flex;
+    justify-content: center;
+}
+
+.input-container {
+    background-color: rgb(246, 246, 246);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+.center-table {
+    display: flex;
+    justify-content: center;
+}
+
+.table-container table {
+    background-color: rgb(246, 246, 246);
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+}
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 18px;
+}
+
+.table-container table thead tr td {
+    font-size: 14px;
+    padding-right: 10px;
+}
+
+.table-container table tbody tr td {
+    padding: 4px;
+}
+
+
+
+
+/* POPUPS */
+
+.popup, .deduct, .update-price, .update-no-coin, .update-main_investment {
+    background-color: rgb(235, 235, 235);
+    position: absolute;
+    opacity: 0;
+    top: -150%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 280px;
+    border-radius: 12px;
+    transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms, transform 20ms ease-in-out 0ms;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.popup form, .deduct form, .update-price form, .update-no-coin form, .update-main_investment form  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup.active, .deduct.active, .update-price.active, .update-no-coin.active, .update-main_investment.active {
+    top: 50%;
+    opacity: 1;
+    transform:translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms, transform 200ms ease-in-out 0ms;
+}
+
+.popup input[type="text"], .deduct input[type="text"], .update-price input[type="text"], .update-no-coin input[type="text"], .update-main_investment input[type="text"] {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.popup .close-button img, .deduct .close-button img, .update-price .close-button img, .update-no-coin .close-button img, .update-main_investment .close-button img {
+    width: 10px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: rgb(158, 158, 158);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.popup .close-button:hover, .deduct .close-button:hover, .update-price .close-button:hover, .update-no-coin .close-button:hover, .update-main_investment .close-button:hover {
+    opacity: .5;
+}
+/* POPUPS*/
+
